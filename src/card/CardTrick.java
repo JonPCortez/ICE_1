@@ -34,7 +34,7 @@ public class CardTrick {
         System.out.println("lucky card: " + luckyCard.getSuit() + " " + luckyCard.getValue());
 
       
-//test to see if it shows up on netbeans 
+//test to see if it shows up on github
       
 
         boolean found = false;
