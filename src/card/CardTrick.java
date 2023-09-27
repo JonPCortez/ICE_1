@@ -27,20 +27,19 @@ public class CardTrick {
             System.out.println(magicHand[i].getSuit() + " " + magicHand[i].getValue());
         }
 
-       
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a card value (1-13): ");
-        int userValue = scanner.nextInt();
-        System.out.print("Enter a card suit (diamonds, hearts, clubs, spades): ");
-        String userSuit = scanner.next();
+        //addiong luckyCard for myself (13 of hearts or King of hearts)
+        Card luckyCard = new Card();
+        luckyCard.setSuit("hearts");
+        luckyCard.setValue(13); 
+        System.out.println("lucky card: " + luckyCard.getSuit() + " " + luckyCard.getValue());
 
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
+      
+
+      
 
         boolean found = false;
         for (Card card : magicHand) {
-            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
                 found = true;
                 break;
             }
